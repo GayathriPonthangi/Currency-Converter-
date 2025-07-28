@@ -27,7 +27,7 @@ A simple and responsive Currency Converter web application built using **HTML**,
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/GayathriPonthangi.github.io/Currency-Converter-.git
+   git clone https://github.com/GayathriPonthangi/Currency-Converter-.git
 2. **Navigate to the project folder**
     ```bash
      cd Currency-Converter-
