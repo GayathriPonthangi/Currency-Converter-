@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <div class="header">
+                <h1>Currency Converter</h1>
+                <p>Convert currencies with real-time exchange rates</p>
+            </div>
+
+            <div class="converter-form">
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Enter amount" value="1" min="0" step="0.01">
+                </div>
+
+                <div class="currency-row">
+                    <div class="currency-group">
+                        <label for="fromCurrency">From</label>
+                        <div class="select-wrapper">
+                            <select id="fromCurrency">
+                                <option value="USD" selected>🇺🇸 USD - US Dollar</option>
+                                <option value="EUR">🇪🇺 EUR - Euro</option>
+                                <option value="GBP">🇬🇧 GBP - British Pound</option>
+                                <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                                <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
+                                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                                <option value="SEK">🇸🇪 SEK - Swedish Krona</option>
+                                <option value="NZD">🇳🇿 NZD - New Zealand Dollar</option>
+                                <option value="MXN">🇲🇽 MXN - Mexican Peso</option>
+                                <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                                <option value="HKD">🇭🇰 HKD - Hong Kong Dollar</option>
+                                <option value="NOK">🇳🇴 NOK - Norwegian Krone</option>
+                                <option value="KRW">🇰🇷 KRW - South Korean Won</option>
+                                <option value="TRY">🇹🇷 TRY - Turkish Lira</option>
+                                <option value="RUB">🇷🇺 RUB - Russian Ruble</option>
+                                <option value="BRL">🇧🇷 BRL - Brazilian Real</option>
+                                <option value="ZAR">🇿🇦 ZAR - South African Rand</option>
+                                <option value="PLN">🇵🇱 PLN - Polish Zloty</option>
+                                <option value="DKK">🇩🇰 DKK - Danish Krone</option>
+                                <option value="CZK">🇨🇿 CZK - Czech Koruna</option>
+                                <option value="HUF">🇭🇺 HUF - Hungarian Forint</option>
+                                <option value="ILS">🇮🇱 ILS - Israeli Shekel</option>
+                                <option value="CLP">🇨🇱 CLP - Chilean Peso</option>
+                                <option value="PHP">🇵🇭 PHP - Philippine Peso</option>
+                                <option value="AED">🇦🇪 AED - UAE Dirham</option>
+                                <option value="SAR">🇸🇦 SAR - Saudi Riyal</option>
+                                <option value="MYR">🇲🇾 MYR - Malaysian Ringgit</option>
+                                <option value="THB">🇹🇭 THB - Thai Baht</option>
+                                <option value="EGP">🇪🇬 EGP - Egyptian Pound</option>
+                                <option value="PKR">🇵🇰 PKR - Pakistani Rupee</option>
+                                <option value="BDT">🇧🇩 BDT - Bangladeshi Taka</option>
+                                <option value="LKR">🇱🇰 LKR - Sri Lankan Rupee</option>
+                                <option value="NPR">🇳🇵 NPR - Nepalese Rupee</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="swap-btn" id="swapBtn" title="Swap currencies">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+                        </svg>
+                    </button>
+
+                    <div class="currency-group">
+                        <label for="toCurrency">To</label>
+                        <div class="select-wrapper">
+                            <select id="toCurrency">
+                                <option value="USD">🇺🇸 USD - US Dollar</option>
+                                <option value="EUR">🇪🇺 EUR - Euro</option>
+                                <option value="GBP">🇬🇧 GBP - British Pound</option>
+                                <option value="INR" selected>🇮🇳 INR - Indian Rupee</option>
+                                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                                <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
+                                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                                <option value="SEK">🇸🇪 SEK - Swedish Krona</option>
+                                <option value="NZD">🇳🇿 NZD - New Zealand Dollar</option>
+                                <option value="MXN">🇲🇽 MXN - Mexican Peso</option>
+                                <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                                <option value="HKD">🇭🇰 HKD - Hong Kong Dollar</option>
+                                <option value="NOK">🇳🇴 NOK - Norwegian Krone</option>
+                                <option value="KRW">🇰🇷 KRW - South Korean Won</option>
+                                <option value="TRY">🇹🇷 TRY - Turkish Lira</option>
+                                <option value="RUB">🇷🇺 RUB - Russian Ruble</option>
+                                <option value="BRL">🇧🇷 BRL - Brazilian Real</option>
+                                <option value="ZAR">🇿🇦 ZAR - South African Rand</option>
+                                <option value="PLN">🇵🇱 PLN - Polish Zloty</option>
+                                <option value="DKK">🇩🇰 DKK - Danish Krone</option>
+                                <option value="CZK">🇨🇿 CZK - Czech Koruna</option>
+                                <option value="HUF">🇭🇺 HUF - Hungarian Forint</option>
+                                <option value="ILS">🇮🇱 ILS - Israeli Shekel</option>
+                                <option value="CLP">🇨🇱 CLP - Chilean Peso</option>
+                                <option value="PHP">🇵🇭 PHP - Philippine Peso</option>
+                                <option value="AED">🇦🇪 AED - UAE Dirham</option>
+                                <option value="SAR">🇸🇦 SAR - Saudi Riyal</option>
+                                <option value="MYR">🇲🇾 MYR - Malaysian Ringgit</option>
+                                <option value="THB">🇹🇭 THB - Thai Baht</option>
+                                <option value="EGP">🇪🇬 EGP - Egyptian Pound</option>
+                                <option value="PKR">🇵🇰 PKR - Pakistani Rupee</option>
+                                <option value="BDT">🇧🇩 BDT - Bangladeshi Taka</option>
+                                <option value="LKR">🇱🇰 LKR - Sri Lankan Rupee</option>
+                                <option value="NPR">🇳🇵 NPR - Nepalese Rupee</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="convert-btn" id="convertBtn">
+                    <span class="btn-text">Convert Currency</span>
+                    <div class="loading-spinner" id="loadingSpinner"></div>
+                </button>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="result-card">
+                    <div class="result-amount" id="resultAmount">0.00</div>
+                    <div class="result-details">
+                        <div class="exchange-rate" id="exchangeRate">1 USD = 0.00 INR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                <div class="error-content">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="15" y1="9" x2="9" y2="15"/>
+                        <line x1="9" y1="9" x2="15" y2="15"/>
+                    </svg>
+                    <span id="errorText">Something went wrong. Please try again.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Exchange rates provided by ExchangeRate-API</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
