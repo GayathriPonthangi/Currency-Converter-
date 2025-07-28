@@ -17,7 +17,7 @@ A simple and responsive Currency Converter web application built using **HTML**,
 
 ## 📸 Screenshots
 
-![Currency Converter Screenshot](currency-converter.png) 
+![Currency Converter Screenshot](https://github.com/user-attachments/assets/8dcc7af9-eac8-42ae-a32d-1695195db6d9) 
 
 ## 🌐 Live Demo
 
