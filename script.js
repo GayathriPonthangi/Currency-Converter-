@@ -155,7 +155,6 @@ class CurrencyConverter {
 
     this.initializeElements()
     this.attachEventListeners()
-    //this.performInitialConversion()
   }
 
   initializeElements() {
@@ -176,11 +175,6 @@ class CurrencyConverter {
     this.convertBtn.addEventListener("click", () => this.convertCurrency())
     this.swapBtn.addEventListener("click", () => this.swapCurrencies())
 
-    // Auto-convert on input change
-    //this.amountInput.addEventListener("input", () => this.debounceConvert())
-    //this.fromCurrency.addEventListener("change", () => this.convertCurrency())
-    //this.toCurrency.addEventListener("change", () => this.convertCurrency())
-
     // Enter key support
     this.amountInput.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
@@ -189,15 +183,6 @@ class CurrencyConverter {
     })
   }
 
- /* debounceConvert() {
-    clearTimeout(this.debounceTimer)
-    this.debounceTimer = setTimeout(() => {
-      if (this.amountInput.value && this.amountInput.value > 0) {
-        this.convertCurrency()
-      }
-    }, 500)
-  }
-*/
   async convertCurrency() {
     const amount = Number.parseFloat(this.amountInput.value)
     const from = this.fromCurrency.value
@@ -325,13 +310,6 @@ class CurrencyConverter {
     this.errorMessage.classList.remove("show")
   }
 
-  /*performInitialConversion() {
-    // Perform initial conversion with default values
-    setTimeout(() => {
-      this.convertCurrency()
-    }, 500)
-  }
-*/
   // Utility method to format currency
   formatCurrency(amount, currency) {
     return new Intl.NumberFormat("en-US", {
